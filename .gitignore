@@ -1,0 +1,18 @@
+# Environments
+venv/
+.env
+
+# Data that shouldn't be in git
+data/
+!data/.gitkeep
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Kaggle credentials
+kaggle.json

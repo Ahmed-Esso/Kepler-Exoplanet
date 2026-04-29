@@ -6,3 +6,5 @@ seaborn
 jupyter
 kaggle
 mlxtend
+plotly
+networkx

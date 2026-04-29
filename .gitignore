@@ -16,3 +16,7 @@ __pycache__/
 
 # Kaggle credentials
 kaggle.json
+
+# Continuity
+SESSION_HANDOFF.md
+.continuity/

@@ -1,6 +1,7 @@
 pandas
 numpy
 scikit-learn
+joblib
 matplotlib
 seaborn
 jupyter
@@ -8,3 +9,4 @@ kaggle
 mlxtend
 plotly
 networkx
+streamlit

@@ -1,7 +1,7 @@
 # Kepler Exoplanet Classification System
 
 A comprehensive machine learning application for classifying exoplanet candidates from NASA's Kepler Space Telescope data using advanced classification and clustering techniques.
-https://kepler-exoplanet-analysis.streamlit.app/
+
 ---
 
 ## Table of Contents
@@ -123,7 +123,7 @@ The system generates detailed performance metrics including:
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/Ahmed-Esso/Kepler-Exoplanet
+git clone <repository-url>
 cd "Kepler Exoplanet"
 ```
 

@@ -16,12 +16,12 @@ from matplotlib.colors import LinearSegmentedColormap
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE_DIR    = Path(__file__).resolve().parent
 DATA_PATH   = BASE_DIR.parent / "data" / "cumulative.csv"
-METRICS_PATH = BASE_DIR / "model_comparison_results_advanced.csv"
+METRICS_PATH = BASE_DIR.parent / "data" / "processed" / "model_comparison_results_advanced.csv"
 MODEL_PATHS = {
-    "Logistic Regression": BASE_DIR / "log_model.pkl",
-    "Decision Tree":       BASE_DIR / "tree_model.pkl",
-    "SVM (RBF)":           BASE_DIR / "svm_model.pkl",
-    "Naive Bayes":         BASE_DIR / "nb_model.pkl",
+    "Logistic Regression": BASE_DIR.parent / "models" / "log_model.pkl",
+    "Decision Tree":       BASE_DIR.parent / "models" / "tree_model.pkl",
+    "SVM (RBF)":           BASE_DIR.parent / "models" / "svm_model.pkl",
+    "Naive Bayes":         BASE_DIR.parent / "models" / "nb_model.pkl",
 }
 
 # ── Galaxy Palette ──────────────────────────────────────────────────────────
@@ -457,7 +457,7 @@ def compute_association_rules(_df):
 @st.cache_data(show_spinner=False)
 def load_optimal_clusters():
     try:
-        df = pd.read_csv(BASE_DIR / "clustering_elbow_data.csv")
+        df = pd.read_csv(BASE_DIR.parent / "data" / "processed" / "clustering_elbow_data.csv")
         return df['k'].tolist(), df['inertia'].tolist(), df['silhouette'].tolist()
     except Exception:
         return [], [], []
@@ -466,7 +466,7 @@ def load_optimal_clusters():
 def overview_pca_3d():
     from sklearn.decomposition import PCA
     try:
-        cluster_df = pd.read_csv(BASE_DIR / "clustering_results_advanced.csv")
+        cluster_df = pd.read_csv(BASE_DIR.parent / "data" / "processed" / "clustering_results_advanced.csv")
     except:
         return go.Figure()
         

@@ -5,6 +5,8 @@ venv/
 # Data that shouldn't be in git
 data/
 !data/.gitkeep
+!data/processed/
+!data/processed/*
 
 # Python caches
 __pycache__/
